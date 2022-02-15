@@ -52,7 +52,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (mouse > cat1 && mouse > cat2) {
     let aux = mouse - cat1;
     let aux2 = mouse - cat2;
-    if (aux > aux2) {
+    if (aux < aux2) {
       result = 'cat1';
     } else if (aux < aux2) {
       result = 'cat1';
@@ -63,10 +63,10 @@ function catAndMouse(mouse, cat1, cat2) {
   if (mouse < cat1 && mouse < cat2) {
     let aux = cat1 - mouse;
     let aux2 = cat2 - mouse;
-    if (aux > aux2) {
+    if (aux < aux2) {
       result = 'cat1';
-    } else if (aux < aux2) {
-      result = 'cat1';
+    } else if (aux > aux2) {
+      result = 'cat2';
     } else {
       result = 'os gatos trombam e o rato foge';
     }
@@ -74,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (mouse > cat1 && mouse < cat2) {
     let aux = mouse - cat1;
     let aux2 = cat2 - mouse;
-    if (aux > aux2) {
+    if (aux < aux2) {
       result = 'cat1';
     } else if (aux < aux2) {
       result = 'cat1';
