@@ -85,7 +85,6 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
 }
 
-console.log(catAndMouse(0, 3, 2));
 // Desafio 8
 function mod(value) {
   if (value % 3 === 0 && value % 5 === 0) {
