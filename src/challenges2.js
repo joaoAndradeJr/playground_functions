@@ -1,6 +1,13 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, person) {
+  let newList = [];
+  let sortedArray = array.sort();
+
+  for (let i = 0; i < sortedArray.length; i += 1) {
+    newList.push({ tech: sortedArray[i], name: person });
+  }
+
+  return newList;
 }
 
 // Desafio 11
