@@ -23,7 +23,7 @@ function generatePhoneNumber(array) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     actual = array[i];
-    counter = 1;
+    counter = 0;
     for (let j = 0; j < array.length - 1; j += 1) {
       if (array[j] === actual) {
         counter += 1;
@@ -57,7 +57,6 @@ function generatePhoneNumber(array) {
   return phone.join('');
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 1, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
