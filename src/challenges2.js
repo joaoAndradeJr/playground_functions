@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(array, person) {
-  if (array === []) {
+  if (array.length === 0) {
     return 'Vazio!';
   }
   let newList = [];
