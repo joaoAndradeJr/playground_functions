@@ -31,6 +31,10 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let sortedArray = array.sort();
   let bigger = sortedArray[sortedArray.length - 1];
+
+  if (sortedArray[sortedArray.length - 1] < 0) {
+    bigger = sortedArray[0];
+  }
   let repeatedTimes = 0;
 
   for (let number in array) {
