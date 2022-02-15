@@ -24,7 +24,7 @@ function generatePhoneNumber(array) {
     }
     actual = array[i];
     counter = 0;
-    for (let j = 0; j < array.length - 1; j += 1) {
+    for (let j = 0; j < array.length; j += 1) {
       if (array[j] === actual) {
         counter += 1;
       }
