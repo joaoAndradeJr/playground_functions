@@ -1,5 +1,8 @@
 // Desafio 10
 function techList(array, person) {
+  if (array === []) {
+    return 'Vazio!';
+  }
   let newList = [];
   let sortedArray = array.sort();
 
