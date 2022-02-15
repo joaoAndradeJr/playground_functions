@@ -16,7 +16,9 @@ function splitSentence(word) {
 // Desafio 4
 function concatName(array) {
   let final = array.length - 1;
-  let answer = array[final] + ', ' + array[0];
+  let last = array[final];
+  let first = array[0];
+  let answer = [last, first];
   return answer;
 }
 
@@ -29,7 +31,7 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let sortedArray = array.sort();
   let bigger = sortedArray[sortedArray.length - 1];
-  repeatedTimes = 0;
+  let repeatedTimes = 0;
 
   for (let number in array) {
     if (array[number] === bigger) {
