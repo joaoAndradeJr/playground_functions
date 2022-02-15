@@ -17,10 +17,35 @@ function techList(array, person) {
 let notPossible = 'não é possível gerar um número de telefone com esses valores';
 let incorrect = 'Array com tamanho incorreto.';
 
-function mountPhone(array) {
+function generatePhoneNumber(array) {
+  if (array.length !== 11) {
+    return incorrect;
+  }
+  let actual = '';
+  let counter = 0;
+
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > 9) {
+      return notPossible;
+    }
+    actual = array[i];
+    counter = 0;
+    for (let j = 0; j < array.length; j += 1) {
+      if (array[j] === actual) {
+        counter += 1;
+      }
+    }
+
+    if (counter >= 3) {
+      return notPossible;
+    }
+  }
+
   let phone = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] < 0) return notPossible;
+    if (array[i] < 0) {
+      return notPossible;
+    }
     if (i === 0) {
       phone.push('(');
       phone.push(array[i]);
@@ -31,28 +56,11 @@ function mountPhone(array) {
     } else if (i === 7) {
       phone.push('-');
       phone.push(array[i]);
+    } else {
+      phone.push(array[i]);
     }
-    phone.push(array[i]);
   }
   return phone.join('');
-}
-
-function generatePhoneNumber(array) {
-  if (array.length !== 11) return incorrect;
-  let actual = '';
-  let counter = 0;
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > 9) return notPossible;
-    actual = array[i];
-    counter = 0;
-    for (let j = 0; j < array.length; j += 1) {
-      if (array[j] === actual) {
-        counter += 1;
-      }
-    }
-    if (counter >= 3) return notPossible;
-  }
-  return mountPhone(array);
 }
 
 // Desafio 12
