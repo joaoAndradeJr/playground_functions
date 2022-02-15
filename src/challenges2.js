@@ -17,8 +17,11 @@ function generatePhoneNumber(array) {
   }
   let actual = '';
   let counter = 0;
-  
+
   for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
     actual = array[i];
     counter = 1;
     for (let j = 0; j < array.length - 1; j += 1) {
