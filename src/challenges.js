@@ -34,7 +34,7 @@ function highestCount(array) {
   let repeatedTimes = 0;
 
   for (let number in array) {
-    if (array[number] === bigger) {
+    if (value === bigger) {
       repeatedTimes += 1;
     }
   }
@@ -55,19 +55,24 @@ function catAndMouse() {
 }
 
 // Desafio 8
+function mod(value) {
+  if (value % 3 === 0 && value % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (value % 5 === 0) {
+    return 'buzz';
+  }
+  if (value % 3 === 0) {
+    return 'fizz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(array) {
   let answer = [];
 
   for (let number in array) {
-    if (array[number] % 3 === 0 && array[number] % 5 === 0) {
-      answer.push('fizzBuzz');
-    } else if (array[number] % 5 === 0) {
-      answer.push('buzz');
-    } else if (array[number] % 3 === 0) {
-      answer.push('fizz');
-    } else {
-      answer.push('bug!');
-    }
+    answer.push(mod(array[number]));
   }
 
   return answer;
