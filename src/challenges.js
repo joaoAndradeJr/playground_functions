@@ -71,8 +71,9 @@ function mod(value) {
 function fizzBuzz(array) {
   let answer = [];
 
-  for (let number in array) {
-    answer.push(mod(array[number]));
+  for (let i = 0; i < array.length; i += 1) {
+    let result = mod(array[number]);
+    answer.push(result);
   }
 
   return answer;
