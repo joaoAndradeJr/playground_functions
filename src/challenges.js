@@ -18,7 +18,7 @@ function concatName(array) {
   let final = array.length - 1;
   let last = array[final];
   let first = array[0];
-  let answer = [last, first];
+  let answer = `${last}, ${first}`;
   return answer;
 }
 
@@ -43,20 +43,34 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  if (mouse - cat1 > mouse - cat2) {
-    return 'cat2';
-  }
-  if (mouse - cat1 < mouse - cat2) {
-    return 'cat1';
-  }
+function catAndMouse() {
+//   if (mouse - cat1 > mouse - cat2) {
+//     return 'cat2';
+//   }
+//   if (mouse - cat1 < mouse - cat2) {
+//     return 'cat1';
+//   }
 
-  return 'os gatos trombam e o rato foge';
+//   return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let answer = [];
+
+  for (let number in array) {
+    if (array[number] % 3 === 0 && array[number] % 5 === 0) {
+      answer.push('fizzBuzz');
+    } else if (array[number] % 5 === 0) {
+      answer.push('buzz');
+    } else if (array[number] % 3 === 0) {
+      answer.push('fizz');
+    } else {
+      answer.push('bug!');
+    }
+  }
+
+  return answer;
 }
 
 // Desafio 9
