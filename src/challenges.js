@@ -34,7 +34,7 @@ function highestCount(array) {
   let repeatedTimes = 0;
 
   for (let number in array) {
-    if (value === bigger) {
+    if (array[number] === bigger) {
       repeatedTimes += 1;
     }
   }
